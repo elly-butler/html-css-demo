@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="site.css">
+    <title>Welcome to HTML</title>
+    <script>
+        var teacher = {
+            firstName: 'Elly',
+            lastName: 'Butler',
+            languages: [
+                'CSS',
+                'HTML'
+            ]
+        };
+
+
+        function addLanguage(myteacher, language) {
+
+            teacher.languages.push(language);
+
+            console.log('The teacher is ' + teacher.firstName);
+
+            if (teacher.languages.length === 1) {
+                console.log('they only know ' + teacher.languages[0]);
+            }
+            else {
+                console.log('they know lots of languages: ' + teacher.languages.join(' and '));
+            }
+        }
+        addLanguage(teacher, 'lightburn')
+    </script>
+</head>
+
+<body>
+    <h1>Welcome to HTML 3</h1>
+    <div class="main">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga obcaecati aut molestias quae exercitationem ut
+            ipsa culpa nostrum corporis! Labore possimus quae unde itaque, placeat id? Incidunt eaque quae mollitia?</p>
+    </div>
+</body>
+
+</html>
