@@ -45,6 +45,29 @@
         let product = sum * factor;
 
         console.log(product);
+
+        myCart = { products: [] };
+  
+  // this function returns nothing, but modifies a variable.
+  function addToCart(product) {
+      myCart.products.push(product);
+  }
+  
+  // this function returns a number
+  function calculateShipping(cart) {
+     var weight = 5;
+     switch (shippingMethod) {
+       case 'UPS':
+          return 5 + (weight * 1.2);
+       case 'FedEx':
+          return weight * 2.1;
+       default:
+          return 85;
+     }
+  }
+
+  console.log(calculateShipping);
+
     </script>
 </head>
 
