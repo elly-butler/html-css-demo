@@ -7,66 +7,19 @@
     <link href="site.css">
     <title>Welcome to HTML</title>
     <script>
-        var teacher = {
-            firstName: 'Elly',
-            lastName: 'Butler',
-            languages: [
-                'CSS',
-                'HTML'
-            ]
-        };
+        var quantity = 5; // new variable, new name
+        var updated = mulitplyBy2(quantity);
 
-
-        function addLanguage(myteacher, language) {
-
-            teacher.languages.push(language);
-
-            console.log('The teacher is ' + teacher.firstName);
-
-            if (teacher.languages.length === 1) {
-                console.log('they only know ' + teacher.languages[0]);
-            }
-            else {
-                console.log('they know lots of languages: ' + teacher.languages.join(' and '));
-            }
+        function mulitplyBy2(num) {
+            num = num * 2;
+            return num;
         }
-        addLanguage(teacher, 'lightburn')
+        mulitplyBy2(quantity);
+        
+        console.log(quantity); // writes 5, this isn't looking at the return from the function!
+        console.log(updated); // writes 10, this is from the function return output!
 
-        var myNum1
-        var myFactor = 2
 
-        myNum1 = 6
-
-        let a = 4;
-        let b = 6;
-        let sum = a + b;
-
-        let factor = 2;
-        let product = sum * factor;
-
-        console.log(product);
-
-        myCart = { products: [] };
-  
-  // this function returns nothing, but modifies a variable.
-  function addToCart(product) {
-      myCart.products.push(product);
-  }
-  
-  // this function returns a number
-  function calculateShipping(cart) {
-     var weight = 5;
-     switch (shippingMethod) {
-       case 'UPS':
-          return 5 + (weight * 1.2);
-       case 'FedEx':
-          return weight * 2.1;
-       default:
-          return 85;
-     }
-  }
-
-  console.log(calculateShipping);
 
     </script>
 </head>
