@@ -7,18 +7,36 @@
     <link href="site.css">
     <title>Welcome to HTML</title>
     <script>
-        var quantity = 5; // new variable, new name
-        var updated = mulitplyBy2(quantity);
+        const original = {
+            customerId: 3,
+            firstName: 'John',
+            lastName: 'Doe'
+        };
 
-        function mulitplyBy2(num) {
-            num = num * 2;
-            return num;
+        const updates = {
+            firstName: 'Johnny',
+            lastName: 'Doe'
         }
-        mulitplyBy2(quantity);
-        
-        console.log(quantity); // writes 5, this isn't looking at the return from the function!
-        console.log(updated); // writes 10, this is from the function return output!
 
+        // 1. using spread ...
+        let copy1 = {
+            ...original, // copies in all 'original' first
+            ...updates // overwrites any that exist from the updates
+        };
+
+        // 2. using  Object.assign() method, same result as #1 (but more verbose)
+        let copy2 = Object.assign(
+            {}, //start with an empty object, so no null reference occurs
+            original, // copies in all 'original' first
+            updates // you get the idea, same as spread above
+        );
+
+        // 3. field by field copy, must know which is proper source for each property
+        let copy3 = {
+            customerId: original.customerId,
+            firstName: updates.firstName
+     lastName: updates.lastName
+        }
 
 
     </script>
